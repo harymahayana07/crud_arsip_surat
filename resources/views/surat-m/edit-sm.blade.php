@@ -6,7 +6,7 @@
         <h3 class="page-title">Edit Surat Masuk</h3>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Surat Masuk</a></li>
+                <li class="breadcrumb-item"><a>Surat Masuk</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Edit Surat Masuk</li>
             </ol>
         </nav>
@@ -14,8 +14,7 @@
 
     <div class="grid-margin stretch-card">
         <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Edit Surat Masuk</h4>
+            <div class="card-body" style="background-color: #ECE5ED;">
                 <p class="card-description"></p>
 
                 <form method="POST" action="/update-sm/{{ $data->id }}" enctype="multipart/form-data" class="forms-sample">
@@ -68,13 +67,48 @@
                     <!-- rabu -->
                     <div class="form-group">
                         <label for="exampleFormControlSelect2">Tujuan Disposisi</label>
-                        <select class="form-control" id="exampleFormControlSelect2" name="jenisSurat_id">
-                            </option>
-                            @foreach ($jenis as $x)
-                            <option value="{{ $x->id }}">{{ $x->keterangan }}</option>
-                            @endforeach
+                        <select class="form-control" id="exampleFormControlSelect2" name="disposisi">
+                            <option value="1" <?php if ($data->pengirim == 1) {
+                                                    echo 'selected';
+                                                } ?>>Wakil Rektor I</option>
+                            <option value="2" <?php if ($data->pengirim == 2) {
+                                                    echo 'selected';
+                                                } ?>>Wakil Rektor II</option>
+                            <option value="3" <?php if ($data->pengirim == 3) {
+                                                    echo 'selected';
+                                                } ?>>Kepala Biro</option>
+                            <option value="4" <?php if ($data->pengirim == 4) {
+                                                    echo 'selected';
+                                                } ?>>Kabag</option>
+                            <option value="5" <?php if ($data->pengirim == 5) {
+                                                    echo 'selected';
+                                                } ?>>Kasubbag</option>
+                            <option value="6" <?php if ($data->pengirim == 6) {
+                                                    echo 'selected';
+                                                } ?>>Direktur</option>
+                            <option value="7" <?php if ($data->pengirim == 7) {
+                                                    echo 'selected';
+                                                } ?>>Dekan Fakultas</option>
+                            <option value="8" <?php if ($data->pengirim == 8) {
+                                                    echo 'selected';
+                                                } ?>>Ketua Jurusan</option>
+                            <option value="9" <?php if ($data->pengirim == 9) {
+                                                    echo 'selected';
+                                                } ?>>Koordinator Prodi</option>
+                            <option value="10" <?php if ($data->pengirim == 10) {
+                                                    echo 'selected';
+                                                } ?>>Ketua Lembaga</option>
+                            <option value="11" <?php if ($data->pengirim == 11) {
+                                                    echo 'selected';
+                                                } ?>>Kepala Unit</option>
+                            <option value="12" <?php if ($data->pengirim == 12) {
+                                                    echo 'selected';
+                                                } ?>>Kepala Lab</option>
+                            <option value="13" <?php if ($data->pengirim == 13) {
+                                                    echo 'selected';
+                                                } ?>>Lainnya...</option>
                         </select>
-                        @error('jenisSurat_id')
+                        @error('disposisi')
                         <p class="text-danger pt-1"><small> {{ $message }}</small></p>
                         @enderror
                     </div>
@@ -96,9 +130,9 @@
                         <input type="file" name="file" class="file-upload-default">
                         <input type="hidden" name="pathFile" value="{{ $data->file }}">
                         <div class="input-group col-xs-12">
-                            <input type="text" class="form-control file-upload-info" disabled placeholder="{{ $data->file }}">
+                            <input type="text" class="form-control file-upload-info" disabled placeholder="{{ $data->file }}" style="background-color: #FFFEFF;">
                             <span class="input-group-append">
-                                <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
+                                <button class="file-upload-browse btn btn-gradient-primary" type="button">Pilih File</button>
                             </span>
                         </div>
                         @error('file')

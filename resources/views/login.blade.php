@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>IAHN GDE PUDJA MATARAM</title>
+    <title>App Surat | IAHN GDE PUDJA MATARAM</title>
 
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('thema/assets/vendors/mdi/css/materialdesignicons.min.css') }}">
@@ -26,13 +26,17 @@
 <body>
     <div class="container-scroller">
         <div class="container-fluid page-body-wrapper full-page-wrapper">
-            <div class="content-wrapper d-flex align-items-center auth">
+            <div class="content-wrapper d-flex align-items-center auth" style="background-image: url('https://siska.universitasbumigora.ac.id/assets/gambar/blurred5.jpg');">
                 <div class="row flex-grow">
                     <div class="col-lg-4 mx-auto">
                         <div class="auth-form-light text-left p-5" style="border-radius: 10px;">
-                            <img src="" alt="IAHN GDE PUDJA MATARAM">
-                            <h4 class="text-center">IAHN GDE PUDJA MATARAM</h4>
-                            <h6 class="font-weight-light">Sign in to continue.</h6>
+                            <h4 class="text-center" style="text-shadow: 0 0 3px #FFFEFF, 0 0 5px #0000FF;">IAHN GDE PUDJA MATARAM</h4>
+                            <div class="text-center mb-3">
+                                <img src="{{ asset('thema/assets/images/faces/IAHN.jpeg') }}" alt="IAHN GDE PUDJA MATARAM" style="width: 200px;margin: auto;">
+                            </div>
+                            <!-- <h6 class="font-weight-light">Login sebelum masuk ke Web App Arsip Surat</h6> -->
+                            <h6 class="font-weight-light text-center" style="color: red;">*Login sebelum masuk ke Web App Arsip Surat</h6>
+
                             <form method="POST" action="/login" class="pt-3">
                                 @csrf
                                 <div class="form-group">
