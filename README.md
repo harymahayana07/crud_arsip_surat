@@ -6,6 +6,3 @@
 - Mengelola data surat masuk
 - Mengelola data surat keluar
 - Mengelola data jenis surat
-- Pencarian Yang menarik Untuk User/Unit Kerja
-
-
